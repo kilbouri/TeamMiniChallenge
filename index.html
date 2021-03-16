@@ -1,220 +1,313 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Ravi+Prakash&display=swap" rel="stylesheet">
-        <title>Mini Challenge</title>
-    </head>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ravi+Prakash&display=swap" rel="stylesheet">
+    <title>The Toad Pond (MiniChallenge)</title>
+
     <style>
-            body{
-                  background-color: #40f99b;
-                  text-size: 45px;
-                  
-            }
-            
-            table, th, td {
-                  border: 25px groove #0ed9c8;
-                  padding: 15px;
-                  text-shadow:1px 1px 1px #ccc;
-                  margin: 0 200px;
-                  
-            }
-            table{
-                   border: 16px ridge(5,10,1);
-        
-            }
-            
-            h1{
-                color:#fca311;
-                font-family: 'Ravi Prakash', cursive;
-                font-size: 100px;
-                margin: 0px;
-            }
-            h3{
-                color:#89fc00;
-                font-family: 'Ravi Prakash', cursive;
-                font-size: 60px;
-                padding: 0px;
-            }
-           
-            marquee{
-                color:#ffffff;
-                
-            }
-            div{
-                position: absolute;
-                
-                z-index: 1;
-            }
-            p{
-                font-family: 'Ravi Prakash', cursive;
-                font-size: 25px;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Ravi Prakash', cursive;
+            background-color: #40f99b;
+            font-size: 35px;
+        }
 
-            }
-            .button {
-                background-color: #4CAF50; /* Green */
-                border: none;
-                color: white;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-                font-family: 'Ravi Prakash', cursive;
+        .section {
+            min-height: 100vh;
+        }
 
-            }
-           .button4 {
-                padding: 32px 16px;
-                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-           }
-           
-           
-           
-            
-      </style>
-      <body>  
-            <!-- most of content follows the body tag -->
-            <!--Background colour-->
-            
-          
+        .centered {
+            text-align: center;
+            align-content: center;
+        }
 
-            <div class="floater">
-                <a name="chaos"></a>
-                <marquee direction="down" behavior="alternate" width="1000px" height="1000px">
-                <marquee behavior="alternate"><font size="7">?</font></marquee>
-                </marquee>
-            
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
 
-            <p> Play this for some ambient music: </p>
-            <audio controls audoplay>
-            <source src="frog_sounds.mp3" type="audio/mpeg">
-            </audio>
-            
+        h1.section-header {
+            text-align: center;
+            color: #fca311;
+            margin-bottom: -20px;
+        }
 
-            <iframe src="https://gifer.com/embed/2ii9" width=100% height=300.000 frameBorder="0" allowFullScreen></iframe><p><a href="https://gifer.com">via GIFER</a></p>
-            
-            
+        .p-6 {
+            padding: 2px;
+        }
 
-             <p>Welcome To The Toad Pond</p>
+        .flex-row {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-family: 'Ravi Prakash', cursive;
+        }
+
+        table.bordered,
+        th.bordered,
+        td.bordered {
+            border: 2px ridge #0ed9c8;
+            text-shadow: 1px 1px 1px #ccc;
+        }
+
+        table.bordered {
+            border: 12px ridge #0ed9c8;
+        }
+
+        .float {
+            position: fixed;
+            z-index: 1;
+            pointer-events: none;
+            width: 100vw;
+            height: 100vh;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="float">
+        <marquee direction="down" behavior="alternate" width="100%" height="100%">
+            <marquee behavior="alternate">
+                <p style="font-size: 40px;">?</p>
+            </marquee>
+        </marquee>
+    </div>
+
+    <div id="landing" class="section">
+        <iframe src="https://gifer.com/embed/2ii9" width=100% height=300.000 frameBorder="0" allowFullScreen></iframe>
+
+        <h1 class="section-header">Welcome to the Toad Pond</h1>
+
+        <div class="centered" style="width: 100%;">
             <script type="text/javascript" src="//counter.websiteout.net/js/2/10/0/0"></script>
-            <marquee>
-                <img src="toad1.jpg" alt = "toad" width="200">
-            </marquee>    
-            <marquee direction="left">
-                src="toad2.jpg" alt = "toad" width="200">
-            </marquee> 
+        </div>
 
-            
-            
+        <marquee>
+            <img src="toad1.jpg" alt="A very hansome toad." width="200">
+        </marquee>
+        <marquee direction="right" width="100%">
+            <img src="toad2.jpg" alt="A very hansome toad." width="200">
+        </marquee>
+    </div>
 
-                
-            <h3>Ranking The Toads</h3>
-            
-            <img src="squiggle.png" alt = "squiggle" width=75%>
-           
-            
-            
-            <h1> 1.Common Toad
-                2.Golden Toad 
-                3.Panamania <br>
-            <h1>
-            
-          
-            <img src="squiggle.png" alt = "squiggle" width=25%> <br>
-            <button class=" button1" onclick="alert('TOADS TOADS TOADS TOADS!')">More Toads</button> <br> <br>
+    <div id="rankings" class="section">
+        <!-- divider and title -->
+        <div class="flex-row">
+            <img style="padding-right: 25px;" src="squiggle.png" alt="squiggle" width="25%">
+            <h1 class="section-header">Ranking the Toads</h1>
+            <img style="padding-left: 25px;" src="squiggle.png" alt="squiggle" width="25%">
+        </div>
 
-
-            <marquee behavior=alternate width="25%″ scrollamount="8″ scrolldelay="95″ height="37″ bgcolor="#00FFFF">TOADS TOADS TOADS TOADS TOADS</marquee>
-            <marquee behavior="alternate" direction="up" width="80%"><marquee direction="right">TOADS TOADS TOADS TOADS TOADS</marquee></marquee>
-
-            <a href="#chaos">Where am I</a>
-
-            
-             src="gifToad.gif" alt = "toad" width=10% > <br>
-           
-            
-            <img src="gifToad.gif" alt = "toad" width=10% > <br>
-            
-            
-            <img src="gifToad.gif" alt = "toad" width=10% > <br>
-           
-
-            <a name="jokes"></a>
-            <h3>Jokes</h3>
-
-           <div style="float:left;"> <table style="width:100%">
-                  <tr>
-                        Joke</th>
-                        <th>Answer</th>
-                       
-                  </tr>
-                  <tr>
-                        <td>What do you call an illegally parked frog?
-                        <td>Toad
-                       
-                  </tr>
-                  
-                        <td>What do toads drink?</td>
-                        <td>Croaka-cola!</td>
-                        
-                  
-                   <tr>
-                        <td>Where do toads keep their treasure?</td>
-                        <td>In a croak of gold at the end of the rainbow!</td>
-                        
-                  </tr>
-                   <tr>
-                        <td>What goes dot-dot-croak, dot-dash-croak?</td>
-                        <td>Morse toad!
-                        
-                  </tr>
-                 
-                        <td>What do you say to a hitchhiking toad?</td>
-                        <td>Hop in!</td>
-                        
-                  
+        <!-- rankings -->
+        <div style="max-width: 800px; margin: auto;">
+            <table>
+                <tr>
+                    <td style="text-align: right;">
+                        <h2>1.</h2>
+                    </td>
+                    <td>
+                        <h2>Common Toad</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        <h3>2.</h3>
+                    </td>
+                    <td>
+                        <h3>Golden Toad</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        <h4>3.</h4>
+                    </td>
+                    <td>
+                        <h4>Panamanian Golden Toad</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        <h5>4.</h5>
+                    </td>
+                    <td>
+                        <h5>Natter Jack Toad</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        <h6>5.</h6>
+                    </td>
+                    <td>
+                        <h6>European Fire-Bellied Toad</h6>
+                    </td>
+                </tr>
             </table>
+
+            <div class="flex-row" style="padding-top: 25px">
+                <img class="p-6" alt="Common Toad" src="toads_ranking_img/common.png" width="150px" height="98px">
+                <img class="p-6" alt="Golden Toad" src="toads_ranking_img/golden.jpg" width="150px" height="98px">
+                <img class="p-6" alt="Panamanian Golden Toad" src="toads_ranking_img/panamanian_golden.jpg"
+                    width="150px" height="98px">
             </div>
+            <div class="flex-row">
+                <img class="p-6" alt="Natter Jack Toad" src="toads_ranking_img/natterjack.jpg" width="150px"
+                    height="98px">
+                <img class="p-6" alt="European Fire-Bellied Toad" src="toads_ranking_img/eu_fire_bellied.jpg"
+                    width="150px" height="98px">
+            </div>
+            <div class="flex-row">
+                <button class="centered" onclick="alert('TOADS TOADS TOADS TOADS!')">More Toads</button>
+            </div>
+        </div>
+    </div>
 
-            <a name="top"></a>
+    <div id="whereami" style="margin-bottom: 25vh;">
+        <img src="gifToad.gif" alt="toad" width=10%> <br>
 
-            
-            type="button" >Click me!</button> <br ><br>
+        <div class="flex-row">
+            <button onclick="alert('The Toad Pond, of course!')">Where am I</button>
+            <img style="position: absolute; right: 0" src="gifToad.gif" alt="toad" width=10%> <br>
+        </div>
 
-            <a href="#jokes">Back to the jokes! Ribbit</a><br><br><br><br>
+        <img src="gifToad.gif" alt="toad" width=10%> <br>
+    </div>
 
+    <div id="jokes" class="section">
+        <!-- divider and title -->
+        <div class="flex-row">
+            <img style="padding-right: 25px;" src="squiggle.png" alt="squiggle" width="25%">
+            <h1 class="section-header">Jokes</h1>
+            <img style="padding-left: 25px;" src="squiggle.png" alt="squiggle" width="25%">
+        </div>
+
+        <table class="bordered" style="width:80%; margin: auto">
+            <tr class="bordered">
+                <th class="bordered">Joke</th>
+                <th class="bordered">Answer</th>
+            </tr>
+            <tr class="bordered">
+                <td class="bordered">What do you call an illegally parked frog?
+                <td class="bordered">Toad
+            </tr>
+            <tr class="bordered">
+                <td class="bordered">What do toads drink?</td>
+                <td class="bordered">Croaka-cola!</td>
+            </tr>
+            <tr class="bordered">
+                <td class="bordered">Where do toads keep their treasure?</td>
+                <td class="bordered">In a croak of gold at the end of the rainbow!</td>
+            </tr>
+            <tr class="bordered">
+                <td class="bordered">What goes dot-dot-croak, dot-dash-croak?</td>
+                <td class="bordered">Morse toad!
+            </tr>
+            <tr class="bordered">
+                <td class="bordered">What do you say to a hitchhiking toad?</td>
+                <td class="bordered">Hop in!</td>
+            </tr>
+        </table>
+
+        <div class="flex-row">
+            <!-- Easter egg: https://en.wikipedia.org/wiki/Mr._Toad -->
+            <h6> Email in to submit your favourite toad ----->
+                <a href="mailto:kenneth_grahame@mrtoad.com">
+                    kenneth_grahame@mrtoad.com
+                </a>
+            </h6>
+        </div>
+        <div class="flex-row">
+            <h6 style="margin-right: 42px">For your consideration; TOADS -----> </h6>
             <input type="text" list="text_editors">
+            <!-- 42 toads. There were 127 assorted frogs and toads. Toads are a minority. -->
             <datalist id="text_editors">
-                <option value="TOADS"></option>
-                <option value="TOADS"></option>
-                <option value="TOADS"></option>
-                <option value="TOADS"></option>
-                </datalist>
-            <h3><em>For example;
-            </em> TOADS</h3>
+                <option value="Amargosa Toad"></option>
+                <option value="American Toad"></option>
+                <option value="Arizona Toad"></option>
+                <option value="Arroyo Toad"></option>
+                <option value="Black Toad"></option>
+                <option value="Boreal Toad"></option>
+                <option value="California Toad"></option>
+                <option value="Canadian Toad"></option>
+                <option value="Cane Toad"></option>
+                <option value="Chihuahuan Green Toad"></option>
+                <option value="Common Indian Toad"></option>
+                <option value="Dixie Valley Toad"></option>
+                <option value="Dusky Toadlet"></option>
+                <option value="East Texas Toad"></option>
+                <option value="Eastern American Toad"></option>
+                <option value="Fowler's Toad"></option>
+                <option value="Great Basin Spadefoot"></option>
+                <option value="Great Plains Narrow-mouthed Toad"></option>
+                <option value="Green Toad"></option>
+                <option value="Gulf Coast Toad"></option>
+                <option value="Oak Toad"></option>
+                <option value="Plains Toad"></option>
+                <option value="Red-spotted Toad"></option>
+                <option value="Rocky Mountain Toad"></option>
+                <option value="Sonoran Desert Toad"></option>
+                <option value="Sonoran Green Toad"></option>
+                <option value="Southern Toad"></option>
+                <option value="Southwestern Woodhouse's Toad"></option>
+                <option value="Texas Toad"></option>
+                <option value="Western Toad"></option>
+                <option value="Woodhouse's Toad"></option>
+                <option value="Yosemite Toad"></option>
+            </datalist>
+        </div>
+
+        <div>
             <marquee>
-            <iframe src="https://gifer.com/embed/F6SV" width=480 height=410.000 frameBorder="0" allowFullScreen></iframe><p><a href="https://gifer.com">via GIFER</a></p>
+                <iframe src="https://gifer.com/embed/F6SV" width=480 height=410.000 frameBorder="0"
+                    allowFullScreen></iframe>
             </marquee>
             <marquee direction="right">
-            <iframe src="https://gifer.com/embed/VhdJ" width=480 height=412.800 frameBorder="0" allowFullScreen></iframe><p><a href="https://gifer.com">via GIFER</a></p>
-            </marquee> 
+                <iframe src="https://gifer.com/embed/VhdJ" width=480 height=412.800 frameBorder="0"
+                    allowFullScreen></iframe>
+            </marquee>
+        </div>
+    </div>
 
-            <h3> Email in to submit your fav toad -----> thisisfake@toadspond.ca</h3>
-            <a href="https://www.google.com/search?q=toads&rlz=1C1CHBF_enCA912CA912&sxsrf=ALeKk035YK8jJJMkhgGcLdv9Vk2sf6eNXQ:1615760806383&source=lnms&tbm=isch&biw=1920&bih=937">All the toads</a>
-            <br> <br> <br> <br>
-            <a href="top">Back to top of page</a>
 
-           
-                <img src="finalToad.gif" alt = "toad" width=7% > 
-                <img src="finalToad.gif" alt = "toad" width=7% > 
-                <img src="finalToad.gif" alt = "toad" width=7% > 
-                <img src="finalToad.gif" alt = "toad" width=7% > 
-                <img src="finalToad.gif" alt = "toad" width=7% > 
-              
-            
-            
-      </body>
+    <audio autoplay loop>
+        <source src="frog_sounds.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="bottom_nav" style="position: relative; height: 140px; background-image: url('finaltoad.gif');">
+        <a href="#landing" style="position: absolute; left: 15px; bottom: 0px">
+            <p>Back to Top</p>
+        </a>
+        <button style="position: absolute; bottom: 15px; left: calc(50% - 75px); width: 150px"
+            onclick="window.open('https://duckduckgo.com/?q=toads&ia=images&iax=images')">GIVE ME MORE
+            TOADS!</button>
+        <a href="#jokes" style="position: absolute; right: 15px; bottom: 0px">
+            <p>Back to the jokes! Ribbit</p>
+        </a>
+    </div>
+</body>
+
 </html>
